@@ -1,0 +1,2 @@
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.pdb

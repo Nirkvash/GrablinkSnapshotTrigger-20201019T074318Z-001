@@ -1,0 +1,84 @@
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.MainForm.resources
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.pdb
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\mscorlib.dll
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\zh-CHT\mscorlib.resources.dll
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\sortkey.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\sorttbls.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\big5.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\bopomofo.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\ksc.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\prc.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\prcp.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\xjis.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normidna.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfc.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfd.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfkc.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfkd.nlp
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.Properties.Resources.resources
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.exe
+D:\Euresys\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.pdb
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.FormProperties.resources
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.MainForm.resources
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.Properties.Resources.resources
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.exe
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.pdb
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe.config
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.pdb
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\mscorlib.dll
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\zh-CHT\mscorlib.resources.dll
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\sortkey.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\sorttbls.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\big5.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\bopomofo.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\ksc.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\prc.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\prcp.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\xjis.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normidna.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfc.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfd.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfkc.nlp
+G:\Data\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\normnfkd.nlp
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe.config
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.exe
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.pdb
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.FormProperties.resources
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.MainForm.resources
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.Properties.Resources.resources
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.pdb
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.UI.dll
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.UI.GL.dll
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.World.dll
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe.config
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.pdb
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.UI.dll
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.UI.GL.dll
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.World.dll
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.FormProperties.resources
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.MainForm.resources
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.Properties.Resources.resources
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.pdb
+I:\Work\R2R\FY106\程式\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csprojResolveAssemblyReference.cache
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csprojResolveAssemblyReference.cache
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe.config
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.exe
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.pdb
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.exe
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\GrablinkSnapshotTrigger.pdb
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.UI.dll
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.UI.GL.dll
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\x64\Debug\Emgu.CV.World.dll
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csprojResolveAssemblyReference.cache
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.MainForm.resources
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger.Properties.Resources.resources
+C:\Users\MyComputer\Desktop\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\x64\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache

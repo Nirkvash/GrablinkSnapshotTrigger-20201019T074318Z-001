@@ -1,0 +1,18 @@
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\bin\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\bin\Debug\GrablinkSnapshotTrigger.pdb
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger.MainForm.resources
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger.pdb
+D:\example code\multicam-win-6.7.0.102256-sampleprograms\Samples\MsCs\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger90.csprojResolveAssemblyReference.cache
+D:\Euresys\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger.exe
+D:\Euresys\GrablinkSnapshotTrigger20161104\obj\Debug\GrablinkSnapshotTrigger.pdb
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.pdb
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.MainForm.resources
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.Properties.Resources.resources
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger90.csproj.GenerateResource.Cache
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\Debug\GrablinkSnapshotTrigger.exe
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\Debug\GrablinkSnapshotTrigger.pdb
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\obj\Debug\GrablinkSnapshotTrigger.FormProperties.resources
+D:\example code\Example code\GrablinkTrigger.git\GrablinkSnapshotTrigger\bin\Debug\GrablinkSnapshotTrigger.exe.config
