@@ -20,6 +20,7 @@ using Emgu.CV;
 using Emgu.CV.CvEnum;
 using System;
 using System.IO;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
@@ -45,6 +46,11 @@ namespace GrablinkSnapshotTrigger
         public delegate void EnableFormParamSettingDelegate(bool flag);
 
         ImageQueue IQ;
+
+        ImageList IL;
+
+        bool[] IQEmpty;
+
         SystemMgr SysMgr;
         String pathCam = Application.StartupPath + "\\XCM16K80SAT8_L16384RG.cam";
         SaveImageThread[] saveThreads;
@@ -209,8 +215,7 @@ namespace GrablinkSnapshotTrigger
             // 
             // statusBar
             // 
-            this.statusBar.Location = new System.Drawing.Point(0, 958);
-            this.statusBar.Margin = new System.Windows.Forms.Padding(4);
+            this.statusBar.Location = new System.Drawing.Point(0, 692);
             this.statusBar.Name = "statusBar";
             this.statusBar.Panels.AddRange(new System.Windows.Forms.StatusBarPanel[] {
             this.statusBarPanelStatus,
@@ -219,7 +224,7 @@ namespace GrablinkSnapshotTrigger
             this.statusBarPanelLevel,
             this.statusBarPanelReserved});
             this.statusBar.ShowPanels = true;
-            this.statusBar.Size = new System.Drawing.Size(1653, 39);
+            this.statusBar.Size = new System.Drawing.Size(1102, 26);
             this.statusBar.TabIndex = 0;
             // 
             // statusBarPanelStatus
@@ -250,14 +255,13 @@ namespace GrablinkSnapshotTrigger
             // 
             this.statusBarPanelReserved.AutoSize = System.Windows.Forms.StatusBarPanelAutoSize.Spring;
             this.statusBarPanelReserved.Name = "statusBarPanelReserved";
-            this.statusBarPanelReserved.Width = 998;
+            this.statusBarPanelReserved.Width = 455;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 75);
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
@@ -267,21 +271,18 @@ namespace GrablinkSnapshotTrigger
             // 
             this.panel1.AutoScroll = true;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1366, 1020);
+            this.panel1.Size = new System.Drawing.Size(911, 680);
             this.panel1.TabIndex = 1;
             // 
             // gpAcquisitionMode
             // 
             this.gpAcquisitionMode.Controls.Add(this.cbbAcquisitionMode);
-            this.gpAcquisitionMode.Font = new System.Drawing.Font("·s²Ó©úÅé", 9F);
-            this.gpAcquisitionMode.Location = new System.Drawing.Point(9, 9);
-            this.gpAcquisitionMode.Margin = new System.Windows.Forms.Padding(4);
+            this.gpAcquisitionMode.Font = new System.Drawing.Font("PMingLiU", 9F);
+            this.gpAcquisitionMode.Location = new System.Drawing.Point(6, 6);
             this.gpAcquisitionMode.Name = "gpAcquisitionMode";
-            this.gpAcquisitionMode.Padding = new System.Windows.Forms.Padding(4);
-            this.gpAcquisitionMode.Size = new System.Drawing.Size(230, 84);
+            this.gpAcquisitionMode.Size = new System.Drawing.Size(153, 56);
             this.gpAcquisitionMode.TabIndex = 2;
             this.gpAcquisitionMode.TabStop = false;
             this.gpAcquisitionMode.Text = "Acquisition Mode";
@@ -293,10 +294,9 @@ namespace GrablinkSnapshotTrigger
             "PAGE",
             "WEB",
             "LONGPAGE"});
-            this.cbbAcquisitionMode.Location = new System.Drawing.Point(20, 32);
-            this.cbbAcquisitionMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbAcquisitionMode.Location = new System.Drawing.Point(13, 21);
             this.cbbAcquisitionMode.Name = "cbbAcquisitionMode";
-            this.cbbAcquisitionMode.Size = new System.Drawing.Size(188, 26);
+            this.cbbAcquisitionMode.Size = new System.Drawing.Size(127, 20);
             this.cbbAcquisitionMode.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cbbAcquisitionMode, "Fundamental acquisition mode.");
             this.cbbAcquisitionMode.SelectedIndexChanged += new System.EventHandler(this.cbbAcquisitionMode_SelectedIndexChanged);
@@ -304,11 +304,9 @@ namespace GrablinkSnapshotTrigger
             // gpTrigMode
             // 
             this.gpTrigMode.Controls.Add(this.cbbTrigMode);
-            this.gpTrigMode.Location = new System.Drawing.Point(9, 102);
-            this.gpTrigMode.Margin = new System.Windows.Forms.Padding(4);
+            this.gpTrigMode.Location = new System.Drawing.Point(6, 68);
             this.gpTrigMode.Name = "gpTrigMode";
-            this.gpTrigMode.Padding = new System.Windows.Forms.Padding(4);
-            this.gpTrigMode.Size = new System.Drawing.Size(230, 84);
+            this.gpTrigMode.Size = new System.Drawing.Size(153, 56);
             this.gpTrigMode.TabIndex = 3;
             this.gpTrigMode.TabStop = false;
             this.gpTrigMode.Text = "Trigger Mode";
@@ -316,10 +314,9 @@ namespace GrablinkSnapshotTrigger
             // cbbTrigMode
             // 
             this.cbbTrigMode.FormattingEnabled = true;
-            this.cbbTrigMode.Location = new System.Drawing.Point(20, 32);
-            this.cbbTrigMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbTrigMode.Location = new System.Drawing.Point(13, 21);
             this.cbbTrigMode.Name = "cbbTrigMode";
-            this.cbbTrigMode.Size = new System.Drawing.Size(188, 26);
+            this.cbbTrigMode.Size = new System.Drawing.Size(127, 20);
             this.cbbTrigMode.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cbbTrigMode, "Acquisition sequence triggering mode");
             this.cbbTrigMode.SelectedIndexChanged += new System.EventHandler(this.cbbTrigMode_SelectedIndexChanged);
@@ -328,11 +325,9 @@ namespace GrablinkSnapshotTrigger
             // 
             this.gpSeqLength_Ln.Controls.Add(this.vsbSeqLength_Ln);
             this.gpSeqLength_Ln.Controls.Add(this.txtSeqLength_Ln);
-            this.gpSeqLength_Ln.Location = new System.Drawing.Point(9, 195);
-            this.gpSeqLength_Ln.Margin = new System.Windows.Forms.Padding(4);
+            this.gpSeqLength_Ln.Location = new System.Drawing.Point(6, 130);
             this.gpSeqLength_Ln.Name = "gpSeqLength_Ln";
-            this.gpSeqLength_Ln.Padding = new System.Windows.Forms.Padding(4);
-            this.gpSeqLength_Ln.Size = new System.Drawing.Size(230, 82);
+            this.gpSeqLength_Ln.Size = new System.Drawing.Size(153, 55);
             this.gpSeqLength_Ln.TabIndex = 4;
             this.gpSeqLength_Ln.TabStop = false;
             this.gpSeqLength_Ln.Text = "SeqLength_Ln";
@@ -340,20 +335,19 @@ namespace GrablinkSnapshotTrigger
             // 
             // vsbSeqLength_Ln
             // 
-            this.vsbSeqLength_Ln.Location = new System.Drawing.Point(184, 32);
+            this.vsbSeqLength_Ln.Location = new System.Drawing.Point(123, 21);
             this.vsbSeqLength_Ln.Maximum = 65534;
             this.vsbSeqLength_Ln.Minimum = -1;
             this.vsbSeqLength_Ln.Name = "vsbSeqLength_Ln";
-            this.vsbSeqLength_Ln.Size = new System.Drawing.Size(17, 33);
+            this.vsbSeqLength_Ln.Size = new System.Drawing.Size(17, 22);
             this.vsbSeqLength_Ln.TabIndex = 1;
             this.vsbSeqLength_Ln.ValueChanged += new System.EventHandler(this.vsbSeqLength_Ln_ValueChanged);
             // 
             // txtSeqLength_Ln
             // 
-            this.txtSeqLength_Ln.Location = new System.Drawing.Point(20, 32);
-            this.txtSeqLength_Ln.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeqLength_Ln.Location = new System.Drawing.Point(13, 21);
             this.txtSeqLength_Ln.Name = "txtSeqLength_Ln";
-            this.txtSeqLength_Ln.Size = new System.Drawing.Size(152, 29);
+            this.txtSeqLength_Ln.Size = new System.Drawing.Size(103, 22);
             this.txtSeqLength_Ln.TabIndex = 0;
             this.txtSeqLength_Ln.Text = "0";
             this.toolTip1.SetToolTip(this.txtSeqLength_Ln, "Number of lines in a seqence.");
@@ -364,11 +358,9 @@ namespace GrablinkSnapshotTrigger
             this.gpPageLength_ln.Controls.Add(this.vsbPageLength_Ln);
             this.gpPageLength_ln.Controls.Add(this.txtPageLength_Ln);
             this.gpPageLength_ln.ForeColor = System.Drawing.Color.Maroon;
-            this.gpPageLength_ln.Location = new System.Drawing.Point(9, 286);
-            this.gpPageLength_ln.Margin = new System.Windows.Forms.Padding(4);
+            this.gpPageLength_ln.Location = new System.Drawing.Point(6, 191);
             this.gpPageLength_ln.Name = "gpPageLength_ln";
-            this.gpPageLength_ln.Padding = new System.Windows.Forms.Padding(4);
-            this.gpPageLength_ln.Size = new System.Drawing.Size(230, 82);
+            this.gpPageLength_ln.Size = new System.Drawing.Size(153, 55);
             this.gpPageLength_ln.TabIndex = 5;
             this.gpPageLength_ln.TabStop = false;
             this.gpPageLength_ln.Text = "PageLength_Ln";
@@ -376,21 +368,20 @@ namespace GrablinkSnapshotTrigger
             // 
             // vsbPageLength_Ln
             // 
-            this.vsbPageLength_Ln.Location = new System.Drawing.Point(184, 32);
+            this.vsbPageLength_Ln.Location = new System.Drawing.Point(123, 21);
             this.vsbPageLength_Ln.Maximum = 65535;
             this.vsbPageLength_Ln.Minimum = 1;
             this.vsbPageLength_Ln.Name = "vsbPageLength_Ln";
-            this.vsbPageLength_Ln.Size = new System.Drawing.Size(17, 33);
+            this.vsbPageLength_Ln.Size = new System.Drawing.Size(17, 22);
             this.vsbPageLength_Ln.TabIndex = 1;
             this.vsbPageLength_Ln.Value = 500;
             this.vsbPageLength_Ln.ValueChanged += new System.EventHandler(this.vsbPageLength_Ln_ValueChanged);
             // 
             // txtPageLength_Ln
             // 
-            this.txtPageLength_Ln.Location = new System.Drawing.Point(20, 32);
-            this.txtPageLength_Ln.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPageLength_Ln.Location = new System.Drawing.Point(13, 21);
             this.txtPageLength_Ln.Name = "txtPageLength_Ln";
-            this.txtPageLength_Ln.Size = new System.Drawing.Size(152, 29);
+            this.txtPageLength_Ln.Size = new System.Drawing.Size(103, 22);
             this.txtPageLength_Ln.TabIndex = 0;
             this.txtPageLength_Ln.Text = "0";
             this.toolTip1.SetToolTip(this.txtPageLength_Ln, "Number of lines in a page.");
@@ -401,11 +392,9 @@ namespace GrablinkSnapshotTrigger
             this.gpExpose_us.Controls.Add(this.vsbExpose_us);
             this.gpExpose_us.Controls.Add(this.txtExpose_us);
             this.gpExpose_us.ForeColor = System.Drawing.Color.Maroon;
-            this.gpExpose_us.Location = new System.Drawing.Point(9, 470);
-            this.gpExpose_us.Margin = new System.Windows.Forms.Padding(4);
+            this.gpExpose_us.Location = new System.Drawing.Point(6, 313);
             this.gpExpose_us.Name = "gpExpose_us";
-            this.gpExpose_us.Padding = new System.Windows.Forms.Padding(4);
-            this.gpExpose_us.Size = new System.Drawing.Size(230, 82);
+            this.gpExpose_us.Size = new System.Drawing.Size(153, 55);
             this.gpExpose_us.TabIndex = 6;
             this.gpExpose_us.TabStop = false;
             this.gpExpose_us.Text = "Expose_us";
@@ -413,19 +402,18 @@ namespace GrablinkSnapshotTrigger
             // 
             // vsbExpose_us
             // 
-            this.vsbExpose_us.Location = new System.Drawing.Point(184, 32);
+            this.vsbExpose_us.Location = new System.Drawing.Point(123, 21);
             this.vsbExpose_us.Maximum = 5000000;
             this.vsbExpose_us.Name = "vsbExpose_us";
-            this.vsbExpose_us.Size = new System.Drawing.Size(17, 33);
+            this.vsbExpose_us.Size = new System.Drawing.Size(17, 22);
             this.vsbExpose_us.TabIndex = 1;
             this.vsbExpose_us.ValueChanged += new System.EventHandler(this.vsbExpose_us_ValueChanged);
             // 
             // txtExpose_us
             // 
-            this.txtExpose_us.Location = new System.Drawing.Point(20, 32);
-            this.txtExpose_us.Margin = new System.Windows.Forms.Padding(4);
+            this.txtExpose_us.Location = new System.Drawing.Point(13, 21);
             this.txtExpose_us.Name = "txtExpose_us";
-            this.txtExpose_us.Size = new System.Drawing.Size(152, 29);
+            this.txtExpose_us.Size = new System.Drawing.Size(103, 22);
             this.txtExpose_us.TabIndex = 0;
             this.txtExpose_us.Text = "0";
             this.toolTip1.SetToolTip(this.txtExpose_us, "Exposure time for single line.");
@@ -434,11 +422,9 @@ namespace GrablinkSnapshotTrigger
             // gpLineRateMode
             // 
             this.gpLineRateMode.Controls.Add(this.cbbLineRateMode);
-            this.gpLineRateMode.Location = new System.Drawing.Point(9, 561);
-            this.gpLineRateMode.Margin = new System.Windows.Forms.Padding(4);
+            this.gpLineRateMode.Location = new System.Drawing.Point(6, 374);
             this.gpLineRateMode.Name = "gpLineRateMode";
-            this.gpLineRateMode.Padding = new System.Windows.Forms.Padding(4);
-            this.gpLineRateMode.Size = new System.Drawing.Size(230, 84);
+            this.gpLineRateMode.Size = new System.Drawing.Size(153, 56);
             this.gpLineRateMode.TabIndex = 5;
             this.gpLineRateMode.TabStop = false;
             this.gpLineRateMode.Text = "Line Rate Mode";
@@ -450,10 +436,9 @@ namespace GrablinkSnapshotTrigger
             "PERIOD",
             "PULSE",
             "CONVERT"});
-            this.cbbLineRateMode.Location = new System.Drawing.Point(20, 32);
-            this.cbbLineRateMode.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbLineRateMode.Location = new System.Drawing.Point(13, 21);
             this.cbbLineRateMode.Name = "cbbLineRateMode";
-            this.cbbLineRateMode.Size = new System.Drawing.Size(188, 26);
+            this.cbbLineRateMode.Size = new System.Drawing.Size(127, 20);
             this.cbbLineRateMode.TabIndex = 0;
             this.toolTip1.SetToolTip(this.cbbLineRateMode, "Line rate generation method.");
             this.cbbLineRateMode.SelectedIndexChanged += new System.EventHandler(this.cbbLineRateMode_SelectedIndexChanged);
@@ -462,11 +447,9 @@ namespace GrablinkSnapshotTrigger
             // 
             this.gpSeqLength_Pg.Controls.Add(this.vsbSeqLength_Pg);
             this.gpSeqLength_Pg.Controls.Add(this.txtSeqLength_Pg);
-            this.gpSeqLength_Pg.Location = new System.Drawing.Point(9, 378);
-            this.gpSeqLength_Pg.Margin = new System.Windows.Forms.Padding(4);
+            this.gpSeqLength_Pg.Location = new System.Drawing.Point(6, 252);
             this.gpSeqLength_Pg.Name = "gpSeqLength_Pg";
-            this.gpSeqLength_Pg.Padding = new System.Windows.Forms.Padding(4);
-            this.gpSeqLength_Pg.Size = new System.Drawing.Size(230, 82);
+            this.gpSeqLength_Pg.Size = new System.Drawing.Size(153, 55);
             this.gpSeqLength_Pg.TabIndex = 5;
             this.gpSeqLength_Pg.TabStop = false;
             this.gpSeqLength_Pg.Text = "SeqLength_Pg";
@@ -474,20 +457,19 @@ namespace GrablinkSnapshotTrigger
             // 
             // vsbSeqLength_Pg
             // 
-            this.vsbSeqLength_Pg.Location = new System.Drawing.Point(184, 32);
+            this.vsbSeqLength_Pg.Location = new System.Drawing.Point(123, 21);
             this.vsbSeqLength_Pg.Maximum = 65534;
             this.vsbSeqLength_Pg.Minimum = -1;
             this.vsbSeqLength_Pg.Name = "vsbSeqLength_Pg";
-            this.vsbSeqLength_Pg.Size = new System.Drawing.Size(17, 33);
+            this.vsbSeqLength_Pg.Size = new System.Drawing.Size(17, 22);
             this.vsbSeqLength_Pg.TabIndex = 1;
             this.vsbSeqLength_Pg.ValueChanged += new System.EventHandler(this.vsbSeqLength_Pg_ValueChanged);
             // 
             // txtSeqLength_Pg
             // 
-            this.txtSeqLength_Pg.Location = new System.Drawing.Point(20, 32);
-            this.txtSeqLength_Pg.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSeqLength_Pg.Location = new System.Drawing.Point(13, 21);
             this.txtSeqLength_Pg.Name = "txtSeqLength_Pg";
-            this.txtSeqLength_Pg.Size = new System.Drawing.Size(152, 29);
+            this.txtSeqLength_Pg.Size = new System.Drawing.Size(103, 22);
             this.txtSeqLength_Pg.TabIndex = 0;
             this.txtSeqLength_Pg.Text = "0";
             this.toolTip1.SetToolTip(this.txtSeqLength_Pg, "Number of pages in a seqence.");
@@ -498,10 +480,9 @@ namespace GrablinkSnapshotTrigger
             this.ckbDisplayImages.AutoSize = true;
             this.ckbDisplayImages.Checked = true;
             this.ckbDisplayImages.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbDisplayImages.Location = new System.Drawing.Point(22, 51);
-            this.ckbDisplayImages.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbDisplayImages.Location = new System.Drawing.Point(15, 34);
             this.ckbDisplayImages.Name = "ckbDisplayImages";
-            this.ckbDisplayImages.Size = new System.Drawing.Size(142, 22);
+            this.ckbDisplayImages.Size = new System.Drawing.Size(95, 16);
             this.ckbDisplayImages.TabIndex = 3;
             this.ckbDisplayImages.Text = "Display Images";
             this.toolTip1.SetToolTip(this.ckbDisplayImages, "Display live image.");
@@ -511,10 +492,9 @@ namespace GrablinkSnapshotTrigger
             // ckbOriginalImages
             // 
             this.ckbOriginalImages.AutoSize = true;
-            this.ckbOriginalImages.Location = new System.Drawing.Point(22, 18);
-            this.ckbOriginalImages.Margin = new System.Windows.Forms.Padding(4);
+            this.ckbOriginalImages.Location = new System.Drawing.Point(15, 12);
             this.ckbOriginalImages.Name = "ckbOriginalImages";
-            this.ckbOriginalImages.Size = new System.Drawing.Size(184, 22);
+            this.ckbOriginalImages.Size = new System.Drawing.Size(123, 16);
             this.ckbOriginalImages.TabIndex = 1;
             this.ckbOriginalImages.Text = "Save Original Images";
             this.toolTip1.SetToolTip(this.ckbOriginalImages, "Automatically save images.");
@@ -525,11 +505,10 @@ namespace GrablinkSnapshotTrigger
             // 
             this.tabControl1.Controls.Add(this.tabAcquisitionSettings);
             this.tabControl1.Controls.Add(this.tabInspectionSettings);
-            this.tabControl1.Location = new System.Drawing.Point(1376, 3);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Location = new System.Drawing.Point(917, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(260, 1020);
+            this.tabControl1.Size = new System.Drawing.Size(173, 680);
             this.tabControl1.TabIndex = 7;
             // 
             // tabAcquisitionSettings
@@ -541,11 +520,10 @@ namespace GrablinkSnapshotTrigger
             this.tabAcquisitionSettings.Controls.Add(this.gpSeqLength_Ln);
             this.tabAcquisitionSettings.Controls.Add(this.gpExpose_us);
             this.tabAcquisitionSettings.Controls.Add(this.gpPageLength_ln);
-            this.tabAcquisitionSettings.Location = new System.Drawing.Point(4, 28);
-            this.tabAcquisitionSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.tabAcquisitionSettings.Location = new System.Drawing.Point(4, 22);
             this.tabAcquisitionSettings.Name = "tabAcquisitionSettings";
-            this.tabAcquisitionSettings.Padding = new System.Windows.Forms.Padding(4);
-            this.tabAcquisitionSettings.Size = new System.Drawing.Size(252, 988);
+            this.tabAcquisitionSettings.Padding = new System.Windows.Forms.Padding(3);
+            this.tabAcquisitionSettings.Size = new System.Drawing.Size(165, 654);
             this.tabAcquisitionSettings.TabIndex = 0;
             this.tabAcquisitionSettings.Text = "Acquisition";
             this.tabAcquisitionSettings.UseVisualStyleBackColor = true;
@@ -554,24 +532,22 @@ namespace GrablinkSnapshotTrigger
             // 
             this.tabInspectionSettings.Controls.Add(this.ckbDisplayImages);
             this.tabInspectionSettings.Controls.Add(this.ckbOriginalImages);
-            this.tabInspectionSettings.Location = new System.Drawing.Point(4, 28);
-            this.tabInspectionSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.tabInspectionSettings.Location = new System.Drawing.Point(4, 22);
             this.tabInspectionSettings.Name = "tabInspectionSettings";
-            this.tabInspectionSettings.Padding = new System.Windows.Forms.Padding(4);
-            this.tabInspectionSettings.Size = new System.Drawing.Size(252, 988);
+            this.tabInspectionSettings.Padding = new System.Windows.Forms.Padding(3);
+            this.tabInspectionSettings.Size = new System.Drawing.Size(165, 654);
             this.tabInspectionSettings.TabIndex = 1;
             this.tabInspectionSettings.Text = "Image";
             this.tabInspectionSettings.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1653, 997);
+            this.ClientSize = new System.Drawing.Size(1102, 718);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusBar);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Menu = this.mainMenu;
             this.Name = "MainForm";
             this.Text = "GrablinkTrigger";
@@ -639,14 +615,15 @@ namespace GrablinkSnapshotTrigger
             try
             {
                 // Open MultiCam driver
-                //MC.OpenDriver();
-
+                MC.OpenDriver();
+                IQEmpty = new bool[SysMgr.NumSaveImageThread];
                 IQ = new ImageQueue();
+                IL = new ImageList();
                 SysMgr = new SystemMgr();
-
-                //InitParam();
-                //GetParam();
-                //UpdateForm();
+                
+                InitParam();
+                GetParam();
+                UpdateForm();
                 InitInspThreads();
             }
             catch (Euresys.MultiCamException exc)
@@ -683,7 +660,7 @@ namespace GrablinkSnapshotTrigger
             try
             {
                 // Close MultiCam driver
-                //MC.CloseDriver();
+                MC.CloseDriver();
             }
             catch (Euresys.MultiCamException exc)
             {
@@ -694,11 +671,13 @@ namespace GrablinkSnapshotTrigger
         private void InitInspThreads()
         {
             saveThreads = new SaveImageThread[SysMgr.NumSaveImageThread];
+            //Console.WriteLine("SysMgr.NumSaveImageThread:" + SysMgr.NumSaveImageThread);
             for (int i = 0; i < SysMgr.NumSaveImageThread; i++)
             {
-                saveThreads[i] = new SaveImageThread(i, IQ, SysMgr);
+                saveThreads[i] = new SaveImageThread(i, IQ, SysMgr,IL, IQEmpty);
                 saveThreads[i].Start();
             }
+
         }
 
         private void StopInspThreads()
@@ -707,7 +686,9 @@ namespace GrablinkSnapshotTrigger
             {
                 saveThreads[i].bStop = true;
                 saveThreads[i].Join();
+                
             }
+            
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -1033,7 +1014,7 @@ namespace GrablinkSnapshotTrigger
                     {
                         TmpImg.CopyTo(Img.SrcImg);
                     }
-                    IQ.push(Img);
+                    IQ.Push(Img);
 
                     if (bDisplayImages == true)
                     {

@@ -164,4 +164,4 @@
 ; SaveImages = true;
 ; PixelSize = 40;
 ; RootPath = D:\R2R;
-; NumSaveImageThread = 1;
+; NumSaveImageThread = 4;
